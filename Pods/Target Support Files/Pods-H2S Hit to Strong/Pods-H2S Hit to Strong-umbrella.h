@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_H2S__Hit_to_StrongVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_H2S__Hit_to_StrongVersionString[];
+FOUNDATION_EXPORT double Pods_H2S_Hit_to_StrongVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_H2S_Hit_to_StrongVersionString[];
 

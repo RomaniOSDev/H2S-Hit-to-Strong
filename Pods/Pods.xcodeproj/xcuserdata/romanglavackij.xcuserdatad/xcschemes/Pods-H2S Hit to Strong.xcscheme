@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22F9D2D074F3ECB9DE5100E7F3DDADAE"
-               BuildableName = "Pods_H2S__Hit_to_Strong.framework"
-               BlueprintName = "Pods-H2S: Hit to Strong"
+               BlueprintIdentifier = "2175A30A1A4B95857574028E93A9E5D3"
+               BuildableName = "Pods_H2S_Hit_to_Strong.framework"
+               BlueprintName = "Pods-H2S Hit to Strong"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

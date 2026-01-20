@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:H2S Hit to Strong.xcodeproj">
+   </FileRef>
 </Workspace>
