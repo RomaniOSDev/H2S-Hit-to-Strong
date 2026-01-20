@@ -34,7 +34,6 @@
 		74BA267C2F1FE642005A2C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA265A2F1FE642005A2C34 /* ContentView.swift */; };
 		74BA267D2F1FE642005A2C34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26602F1FE642005A2C34 /* SceneDelegate.swift */; };
 		74BA267E2F1FE642005A2C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26612F1FE642005A2C34 /* ViewController.swift */; };
-		E77E39558997BBB3BC7DF2CB /* Pods_H2S_Hit_to_Strong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88589AA58A8B1D3567F8895D /* Pods_H2S_Hit_to_Strong.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77E39558997BBB3BC7DF2CB /* Pods_H2S_Hit_to_Strong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
