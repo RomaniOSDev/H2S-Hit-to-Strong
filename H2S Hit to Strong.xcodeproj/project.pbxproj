@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74BA26632F1FE642005A2C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BA26592F1FE642005A2C34 /* Assets.xcassets */; };
+		74BA26652F1FE642005A2C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */; };
+		74BA26662F1FE642005A2C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BA265F2F1FE642005A2C34 /* Main.storyboard */; };
+		74BA26672F1FE642005A2C34 /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26402F1FE642005A2C34 /* ProgramManager.swift */; };
+		74BA26682F1FE642005A2C34 /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26412F1FE642005A2C34 /* RecordsManager.swift */; };
+		74BA26692F1FE642005A2C34 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26422F1FE642005A2C34 /* SessionManager.swift */; };
+		74BA266A2F1FE642005A2C34 /* Strike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26442F1FE642005A2C34 /* Strike.swift */; };
+		74BA266B2F1FE642005A2C34 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26462F1FE642005A2C34 /* CheckLink.swift */; };
+		74BA266C2F1FE642005A2C34 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26472F1FE642005A2C34 /* InternetViewController.swift */; };
+		74BA266D2F1FE642005A2C34 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26482F1FE642005A2C34 /* LoaderViewController.swift */; };
+		74BA266E2F1FE642005A2C34 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264A2F1FE642005A2C34 /* AchievementsView.swift */; };
+		74BA266F2F1FE642005A2C34 /* AddStrikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */; };
+		74BA26702F1FE642005A2C34 /* LiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */; };
+		74BA26712F1FE642005A2C34 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264D2F1FE642005A2C34 /* OnboardingView.swift */; };
+		74BA26722F1FE642005A2C34 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264E2F1FE642005A2C34 /* ProgressView.swift */; };
+		74BA26732F1FE642005A2C34 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264F2F1FE642005A2C34 /* RecordsView.swift */; };
+		74BA26742F1FE642005A2C34 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */; };
+		74BA26752F1FE642005A2C34 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26512F1FE642005A2C34 /* SettingsView.swift */; };
+		74BA26762F1FE642005A2C34 /* StrikeAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */; };
+		74BA26772F1FE642005A2C34 /* StrikeComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */; };
+		74BA26782F1FE642005A2C34 /* TrainingDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */; };
+		74BA26792F1FE642005A2C34 /* TrainingProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */; };
+		74BA267A2F1FE642005A2C34 /* TrainingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */; };
+		74BA267B2F1FE642005A2C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26582F1FE642005A2C34 /* AppDelegate.swift */; };
+		74BA267C2F1FE642005A2C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA265A2F1FE642005A2C34 /* ContentView.swift */; };
+		74BA267D2F1FE642005A2C34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26602F1FE642005A2C34 /* SceneDelegate.swift */; };
+		74BA267E2F1FE642005A2C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26612F1FE642005A2C34 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BDE808F0E20E5EC6E86D2A3 /* Pods-H2S: Hit to Strong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S: Hit to Strong.debug.xcconfig"; path = "Target Support Files/Pods-H2S: Hit to Strong/Pods-H2S: Hit to Strong.debug.xcconfig"; sourceTree = "<group>"; };
+		654FEDEA0268088EBD220AFF /* Pods_H2S__Hit_to_Strong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H2S__Hit_to_Strong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BA26402F1FE642005A2C34 /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
+		74BA26412F1FE642005A2C34 /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
+		74BA26422F1FE642005A2C34 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		74BA26442F1FE642005A2C34 /* Strike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strike.swift; sourceTree = "<group>"; };
+		74BA26462F1FE642005A2C34 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		74BA26472F1FE642005A2C34 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		74BA26482F1FE642005A2C34 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		74BA264A2F1FE642005A2C34 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStrikeView.swift; sourceTree = "<group>"; };
+		74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionView.swift; sourceTree = "<group>"; };
+		74BA264D2F1FE642005A2C34 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		74BA264E2F1FE642005A2C34 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		74BA264F2F1FE642005A2C34 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
+		74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
+		74BA26512F1FE642005A2C34 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeAnalysisView.swift; sourceTree = "<group>"; };
+		74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeComparisonView.swift; sourceTree = "<group>"; };
+		74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDashboardView.swift; sourceTree = "<group>"; };
+		74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramsView.swift; sourceTree = "<group>"; };
+		74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerView.swift; sourceTree = "<group>"; };
+		74BA26582F1FE642005A2C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74BA26592F1FE642005A2C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74BA265A2F1FE642005A2C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74BA265B2F1FE642005A2C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74BA265C2F1FE642005A2C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74BA265E2F1FE642005A2C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74BA26602F1FE642005A2C34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		74BA26612F1FE642005A2C34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74D649C12F1EB38000124720 /* H2S Hit to Strong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H2S Hit to Strong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FC92D0B3582C15C292D320 /* Pods-H2S: Hit to Strong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S: Hit to Strong.release.xcconfig"; path = "Target Support Files/Pods-H2S: Hit to Strong/Pods-H2S: Hit to Strong.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74D649BE2F1EB38000124720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CD66F14AF1A82C68B3ABE3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				654FEDEA0268088EBD220AFF /* Pods_H2S__Hit_to_Strong.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74BA26432F1FE642005A2C34 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				74BA26402F1FE642005A2C34 /* ProgramManager.swift */,
+				74BA26412F1FE642005A2C34 /* RecordsManager.swift */,
+				74BA26422F1FE642005A2C34 /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		74BA26452F1FE642005A2C34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74BA26442F1FE642005A2C34 /* Strike.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74BA26492F1FE642005A2C34 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				74BA26462F1FE642005A2C34 /* CheckLink.swift */,
+				74BA26472F1FE642005A2C34 /* InternetViewController.swift */,
+				74BA26482F1FE642005A2C34 /* LoaderViewController.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		74BA26572F1FE642005A2C34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74BA26492F1FE642005A2C34 /* LoadingView */,
+				74BA264A2F1FE642005A2C34 /* AchievementsView.swift */,
+				74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */,
+				74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */,
+				74BA264D2F1FE642005A2C34 /* OnboardingView.swift */,
+				74BA264E2F1FE642005A2C34 /* ProgressView.swift */,
+				74BA264F2F1FE642005A2C34 /* RecordsView.swift */,
+				74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */,
+				74BA26512F1FE642005A2C34 /* SettingsView.swift */,
+				74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */,
+				74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */,
+				74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */,
+				74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */,
+				74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74BA26622F1FE642005A2C34 /* H2S Hit to Strong */ = {
+			isa = PBXGroup;
+			children = (
+				74BA26432F1FE642005A2C34 /* Managers */,
+				74BA26452F1FE642005A2C34 /* Models */,
+				74BA26572F1FE642005A2C34 /* Views */,
+				74BA26582F1FE642005A2C34 /* AppDelegate.swift */,
+				74BA26592F1FE642005A2C34 /* Assets.xcassets */,
+				74BA265A2F1FE642005A2C34 /* ContentView.swift */,
+				74BA265B2F1FE642005A2C34 /* Info.plist */,
+				74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */,
+				74BA265F2F1FE642005A2C34 /* Main.storyboard */,
+				74BA26602F1FE642005A2C34 /* SceneDelegate.swift */,
+				74BA26612F1FE642005A2C34 /* ViewController.swift */,
+			);
+			path = "H2S Hit to Strong";
+			sourceTree = "<group>";
+		};
+		74D649B82F1EB38000124720 = {
+			isa = PBXGroup;
+			children = (
+				74BA26622F1FE642005A2C34 /* H2S Hit to Strong */,
+				74D649C22F1EB38000124720 /* Products */,
+				B4D73361A763E394EBD88EA6 /* Pods */,
+				6CD66F14AF1A82C68B3ABE3B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		74D649C22F1EB38000124720 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74D649C12F1EB38000124720 /* H2S Hit to Strong.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4D73361A763E394EBD88EA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BDE808F0E20E5EC6E86D2A3 /* Pods-H2S: Hit to Strong.debug.xcconfig */,
+				D2FC92D0B3582C15C292D320 /* Pods-H2S: Hit to Strong.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74D649C02F1EB38000124720 /* H2S Hit to Strong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74D649D42F1EB38100124720 /* Build configuration list for PBXNativeTarget "H2S Hit to Strong" */;
+			buildPhases = (
+				DA17299260F21F65FAAF505D /* [CP] Check Pods Manifest.lock */,
+				74D649BD2F1EB38000124720 /* Sources */,
+				74D649BE2F1EB38000124720 /* Frameworks */,
+				74D649BF2F1EB38000124720 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "H2S Hit to Strong";
+			productName = "H2S Hit to Strong";
+			productReference = 74D649C12F1EB38000124720 /* H2S Hit to Strong.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74D649B92F1EB38000124720 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					74D649C02F1EB38000124720 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 74D649BC2F1EB38000124720 /* Build configuration list for PBXProject "H2S Hit to Strong" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74D649B82F1EB38000124720;
+			productRefGroup = 74D649C22F1EB38000124720 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74D649C02F1EB38000124720 /* H2S Hit to Strong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74D649BF2F1EB38000124720 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BA26632F1FE642005A2C34 /* Assets.xcassets in Resources */,
+				74BA26652F1FE642005A2C34 /* LaunchScreen.storyboard in Resources */,
+				74BA26662F1FE642005A2C34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA17299260F21F65FAAF505D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-H2S: Hit to Strong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74D649BD2F1EB38000124720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BA26672F1FE642005A2C34 /* ProgramManager.swift in Sources */,
+				74BA26682F1FE642005A2C34 /* RecordsManager.swift in Sources */,
+				74BA26692F1FE642005A2C34 /* SessionManager.swift in Sources */,
+				74BA266A2F1FE642005A2C34 /* Strike.swift in Sources */,
+				74BA266B2F1FE642005A2C34 /* CheckLink.swift in Sources */,
+				74BA266C2F1FE642005A2C34 /* InternetViewController.swift in Sources */,
+				74BA266D2F1FE642005A2C34 /* LoaderViewController.swift in Sources */,
+				74BA266E2F1FE642005A2C34 /* AchievementsView.swift in Sources */,
+				74BA266F2F1FE642005A2C34 /* AddStrikeView.swift in Sources */,
+				74BA26702F1FE642005A2C34 /* LiveSessionView.swift in Sources */,
+				74BA26712F1FE642005A2C34 /* OnboardingView.swift in Sources */,
+				74BA26722F1FE642005A2C34 /* ProgressView.swift in Sources */,
+				74BA26732F1FE642005A2C34 /* RecordsView.swift in Sources */,
+				74BA26742F1FE642005A2C34 /* SessionHistoryView.swift in Sources */,
+				74BA26752F1FE642005A2C34 /* SettingsView.swift in Sources */,
+				74BA26762F1FE642005A2C34 /* StrikeAnalysisView.swift in Sources */,
+				74BA26772F1FE642005A2C34 /* StrikeComparisonView.swift in Sources */,
+				74BA26782F1FE642005A2C34 /* TrainingDashboardView.swift in Sources */,
+				74BA26792F1FE642005A2C34 /* TrainingProgramsView.swift in Sources */,
+				74BA267A2F1FE642005A2C34 /* TrainingTimerView.swift in Sources */,
+				74BA267B2F1FE642005A2C34 /* AppDelegate.swift in Sources */,
+				74BA267C2F1FE642005A2C34 /* ContentView.swift in Sources */,
+				74BA267D2F1FE642005A2C34 /* SceneDelegate.swift in Sources */,
+				74BA267E2F1FE642005A2C34 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74BA265C2F1FE642005A2C34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		74BA265F2F1FE642005A2C34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74BA265E2F1FE642005A2C34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74D649D52F1EB38100124720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDE808F0E20E5EC6E86D2A3 /* Pods-H2S: Hit to Strong.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2S: Hit to Strong";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
+				PRODUCT_NAME = "H2S Hit to Strong";
+				PROJECT_NAME = "H2S Hit to Strong";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		74D649D62F1EB38100124720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FC92D0B3582C15C292D320 /* Pods-H2S: Hit to Strong.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2S: Hit to Strong";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
+				PRODUCT_NAME = "H2S Hit to Strong";
+				PROJECT_NAME = "H2S Hit to Strong";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		74D649D72F1EB38100124720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74D649D82F1EB38100124720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74D649BC2F1EB38000124720 /* Build configuration list for PBXProject "H2S Hit to Strong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D649D72F1EB38100124720 /* Debug */,
+				74D649D82F1EB38100124720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74D649D42F1EB38100124720 /* Build configuration list for PBXNativeTarget "H2S Hit to Strong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D649D52F1EB38100124720 /* Debug */,
+				74D649D62F1EB38100124720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74D649B92F1EB38000124720 /* Project object */;
+}
