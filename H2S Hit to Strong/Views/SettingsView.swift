@@ -96,13 +96,13 @@ struct SettingsView: View {
     }
     
     private func openPrivacyPolicy() {
-        if let url = URL(string: "https://www.termsfeed.com/live/0e8021bd-bb5d-4189-8eaa-21a02fe789a9") {
+        if let url = URL(string: "https://www.termsfeed.com/live/314ddab0-8a29-4cb3-8768-2604e9a09cf7") {
             UIApplication.shared.open(url)
         }
     }
     
     private func openTerms() {
-        if let url = URL(string: "https://www.termsfeed.com/live/182d3e13-cb6a-4316-b87d-9759964e1511") {
+        if let url = URL(string: "https://www.termsfeed.com/live/38cb32a9-b095-428b-98e9-4e09e58e3f06") {
             UIApplication.shared.open(url)
         }
     }

@@ -346,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "H2S: Hit to Strong";
+				INFOPLIST_KEY_CFBundleDisplayName = "ArcanaSpreads&Write";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
 				PRODUCT_NAME = "H2S Hit to Strong";
 				PROJECT_NAME = "H2S Hit to Strong";
@@ -385,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "H2S: Hit to Strong";
+				INFOPLIST_KEY_CFBundleDisplayName = "ArcanaSpreads&Write";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -396,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
 				PRODUCT_NAME = "H2S Hit to Strong";
 				PROJECT_NAME = "H2S Hit to Strong";
