@@ -7,7 +7,7 @@ workflows:
         vars:
           XCODE_WORKSPACE: "H2S Hit to Strong.xcworkspace"
           XCODE_SCHEME: "H2S Hit to Strong"
-          BUNDLE_ID: "com.ewa.h1tt0str9ng"
+          BUNDLE_ID: "com.bar.b87gdf7666"
           APP_STORE_APP_ID: 6756367614
         xcode: latest
         cocoapods: 1.14.2

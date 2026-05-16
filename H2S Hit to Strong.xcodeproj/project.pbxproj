@@ -358,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bar.b87gdf7666;
 				PRODUCT_NAME = "H2S Hit to Strong";
 				PROJECT_NAME = "H2S Hit to Strong";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -397,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ewa.h1tt0str9ng;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bar.b87gdf7666;
 				PRODUCT_NAME = "H2S Hit to Strong";
 				PROJECT_NAME = "H2S Hit to Strong";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
