@@ -3,30 +3,88 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3003F3722FBC682B0058EE20 /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3482FBC682B0058EE20 /* ProgramManager.swift */; };
+		3003F3732FBC682B0058EE20 /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3492FBC682B0058EE20 /* RecordsManager.swift */; };
+		3003F3742FBC682B0058EE20 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F34A2FBC682B0058EE20 /* SessionManager.swift */; };
+		3003F3752FBC682B0058EE20 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F34B2FBC682B0058EE20 /* WorkoutManager.swift */; };
+		3003F3762FBC682B0058EE20 /* Strike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F34D2FBC682B0058EE20 /* Strike.swift */; };
+		3003F3772FBC682B0058EE20 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F34F2FBC682B0058EE20 /* AppRouter.swift */; };
+		3003F3782FBC682B0058EE20 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3502FBC682B0058EE20 /* PersistenceManager.swift */; };
+		3003F3792FBC682B0058EE20 /* PrivacyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3512FBC682B0058EE20 /* PrivacyWebView.swift */; };
+		3003F37A2FBC682B0058EE20 /* SaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3522FBC682B0058EE20 /* SaveService.swift */; };
+		3003F37B2FBC682B0058EE20 /* StartMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3532FBC682B0058EE20 /* StartMainView.swift */; };
+		3003F37C2FBC682B0058EE20 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3552FBC682B0058EE20 /* AchievementsView.swift */; };
+		3003F37D2FBC682B0058EE20 /* AddStrikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3562FBC682B0058EE20 /* AddStrikeView.swift */; };
+		3003F37E2FBC682B0058EE20 /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3572FBC682B0058EE20 /* AppBackgroundView.swift */; };
+		3003F37F2FBC682B0058EE20 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3582FBC682B0058EE20 /* AppDesign.swift */; };
+		3003F3802FBC682B0058EE20 /* CustomWorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3592FBC682B0058EE20 /* CustomWorkoutsView.swift */; };
+		3003F3812FBC682B0058EE20 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35A2FBC682B0058EE20 /* HomeView.swift */; };
+		3003F3822FBC682B0058EE20 /* LiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35B2FBC682B0058EE20 /* LiveSessionView.swift */; };
+		3003F3832FBC682B0058EE20 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35C2FBC682B0058EE20 /* OnboardingView.swift */; };
+		3003F3842FBC682B0058EE20 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35D2FBC682B0058EE20 /* ProgressView.swift */; };
+		3003F3852FBC682B0058EE20 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35E2FBC682B0058EE20 /* RecordsView.swift */; };
+		3003F3862FBC682B0058EE20 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F35F2FBC682B0058EE20 /* SessionHistoryView.swift */; };
+		3003F3872FBC682B0058EE20 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3602FBC682B0058EE20 /* SettingsView.swift */; };
+		3003F3882FBC682B0058EE20 /* StrikeAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3612FBC682B0058EE20 /* StrikeAnalysisView.swift */; };
+		3003F3892FBC682B0058EE20 /* StrikeComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3622FBC682B0058EE20 /* StrikeComparisonView.swift */; };
+		3003F38A2FBC682B0058EE20 /* TrainingDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3632FBC682B0058EE20 /* TrainingDashboardView.swift */; };
+		3003F38B2FBC682B0058EE20 /* TrainingProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3642FBC682B0058EE20 /* TrainingProgramsView.swift */; };
+		3003F38C2FBC682B0058EE20 /* TrainingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3652FBC682B0058EE20 /* TrainingTimerView.swift */; };
+		3003F38D2FBC682B0058EE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3672FBC682B0058EE20 /* AppDelegate.swift */; };
+		3003F38E2FBC682B0058EE20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3692FBC682B0058EE20 /* ContentView.swift */; };
+		3003F38F2FBC682B0058EE20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F36F2FBC682B0058EE20 /* SceneDelegate.swift */; };
+		3003F3902FBC682B0058EE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003F3702FBC682B0058EE20 /* ViewController.swift */; };
+		3003F3912FBC682B0058EE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3003F3682FBC682B0058EE20 /* Assets.xcassets */; };
+		3003F3932FBC682B0058EE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3003F36C2FBC682B0058EE20 /* LaunchScreen.storyboard */; };
+		3003F3942FBC682B0058EE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3003F36E2FBC682B0058EE20 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		3003F3482FBC682B0058EE20 /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
+		3003F3492FBC682B0058EE20 /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
+		3003F34A2FBC682B0058EE20 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		3003F34B2FBC682B0058EE20 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		3003F34D2FBC682B0058EE20 /* Strike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strike.swift; sourceTree = "<group>"; };
+		3003F34F2FBC682B0058EE20 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		3003F3502FBC682B0058EE20 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		3003F3512FBC682B0058EE20 /* PrivacyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyWebView.swift; sourceTree = "<group>"; };
+		3003F3522FBC682B0058EE20 /* SaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveService.swift; sourceTree = "<group>"; };
+		3003F3532FBC682B0058EE20 /* StartMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMainView.swift; sourceTree = "<group>"; };
+		3003F3552FBC682B0058EE20 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		3003F3562FBC682B0058EE20 /* AddStrikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStrikeView.swift; sourceTree = "<group>"; };
+		3003F3572FBC682B0058EE20 /* AppBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
+		3003F3582FBC682B0058EE20 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		3003F3592FBC682B0058EE20 /* CustomWorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWorkoutsView.swift; sourceTree = "<group>"; };
+		3003F35A2FBC682B0058EE20 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3003F35B2FBC682B0058EE20 /* LiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionView.swift; sourceTree = "<group>"; };
+		3003F35C2FBC682B0058EE20 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3003F35D2FBC682B0058EE20 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3003F35E2FBC682B0058EE20 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
+		3003F35F2FBC682B0058EE20 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
+		3003F3602FBC682B0058EE20 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3003F3612FBC682B0058EE20 /* StrikeAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeAnalysisView.swift; sourceTree = "<group>"; };
+		3003F3622FBC682B0058EE20 /* StrikeComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeComparisonView.swift; sourceTree = "<group>"; };
+		3003F3632FBC682B0058EE20 /* TrainingDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDashboardView.swift; sourceTree = "<group>"; };
+		3003F3642FBC682B0058EE20 /* TrainingProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramsView.swift; sourceTree = "<group>"; };
+		3003F3652FBC682B0058EE20 /* TrainingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerView.swift; sourceTree = "<group>"; };
+		3003F3672FBC682B0058EE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3003F3682FBC682B0058EE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3003F3692FBC682B0058EE20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3003F36A2FBC682B0058EE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3003F36B2FBC682B0058EE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3003F36D2FBC682B0058EE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3003F36F2FBC682B0058EE20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3003F3702FBC682B0058EE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		654FEDEA0268088EBD220AFF /* Pods_H2S__Hit_to_Strong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H2S__Hit_to_Strong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7383B8311981BAB78BE6021F /* Pods-H2S Hit to Strong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S Hit to Strong.release.xcconfig"; path = "Target Support Files/Pods-H2S Hit to Strong/Pods-H2S Hit to Strong.release.xcconfig"; sourceTree = "<group>"; };
 		74D649C12F1EB38000124720 /* H2S Hit to Strong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H2S Hit to Strong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88589AA58A8B1D3567F8895D /* Pods_H2S_Hit_to_Strong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H2S_Hit_to_Strong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34819DC88FC4EAF4DA2F4B9 /* Pods-H2S Hit to Strong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S Hit to Strong.debug.xcconfig"; path = "Target Support Files/Pods-H2S Hit to Strong/Pods-H2S Hit to Strong.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3003F2FD2FBC59A40058EE20 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 74D649C02F1EB38000124720 /* H2S Hit to Strong */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (3003F2FD2FBC59A40058EE20 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "H2S Hit to Strong"; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		74D649BE2F1EB38000124720 /* Frameworks */ = {
@@ -39,6 +97,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3003F34C2FBC682B0058EE20 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3003F3482FBC682B0058EE20 /* ProgramManager.swift */,
+				3003F3492FBC682B0058EE20 /* RecordsManager.swift */,
+				3003F34A2FBC682B0058EE20 /* SessionManager.swift */,
+				3003F34B2FBC682B0058EE20 /* WorkoutManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3003F34E2FBC682B0058EE20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3003F34D2FBC682B0058EE20 /* Strike.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3003F3542FBC682B0058EE20 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3003F34F2FBC682B0058EE20 /* AppRouter.swift */,
+				3003F3502FBC682B0058EE20 /* PersistenceManager.swift */,
+				3003F3512FBC682B0058EE20 /* PrivacyWebView.swift */,
+				3003F3522FBC682B0058EE20 /* SaveService.swift */,
+				3003F3532FBC682B0058EE20 /* StartMainView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3003F3662FBC682B0058EE20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3003F3552FBC682B0058EE20 /* AchievementsView.swift */,
+				3003F3562FBC682B0058EE20 /* AddStrikeView.swift */,
+				3003F3572FBC682B0058EE20 /* AppBackgroundView.swift */,
+				3003F3582FBC682B0058EE20 /* AppDesign.swift */,
+				3003F3592FBC682B0058EE20 /* CustomWorkoutsView.swift */,
+				3003F35A2FBC682B0058EE20 /* HomeView.swift */,
+				3003F35B2FBC682B0058EE20 /* LiveSessionView.swift */,
+				3003F35C2FBC682B0058EE20 /* OnboardingView.swift */,
+				3003F35D2FBC682B0058EE20 /* ProgressView.swift */,
+				3003F35E2FBC682B0058EE20 /* RecordsView.swift */,
+				3003F35F2FBC682B0058EE20 /* SessionHistoryView.swift */,
+				3003F3602FBC682B0058EE20 /* SettingsView.swift */,
+				3003F3612FBC682B0058EE20 /* StrikeAnalysisView.swift */,
+				3003F3622FBC682B0058EE20 /* StrikeComparisonView.swift */,
+				3003F3632FBC682B0058EE20 /* TrainingDashboardView.swift */,
+				3003F3642FBC682B0058EE20 /* TrainingProgramsView.swift */,
+				3003F3652FBC682B0058EE20 /* TrainingTimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3003F3712FBC682B0058EE20 /* H2S Hit to Strong */ = {
+			isa = PBXGroup;
+			children = (
+				3003F34C2FBC682B0058EE20 /* Managers */,
+				3003F34E2FBC682B0058EE20 /* Models */,
+				3003F3542FBC682B0058EE20 /* Router */,
+				3003F3662FBC682B0058EE20 /* Views */,
+				3003F3672FBC682B0058EE20 /* AppDelegate.swift */,
+				3003F3682FBC682B0058EE20 /* Assets.xcassets */,
+				3003F3692FBC682B0058EE20 /* ContentView.swift */,
+				3003F36A2FBC682B0058EE20 /* Info.plist */,
+				3003F36C2FBC682B0058EE20 /* LaunchScreen.storyboard */,
+				3003F36E2FBC682B0058EE20 /* Main.storyboard */,
+				3003F36F2FBC682B0058EE20 /* SceneDelegate.swift */,
+				3003F3702FBC682B0058EE20 /* ViewController.swift */,
+			);
+			path = "H2S Hit to Strong";
+			sourceTree = "<group>";
+		};
 		6CD66F14AF1A82C68B3ABE3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,7 +183,7 @@
 		74D649B82F1EB38000124720 = {
 			isa = PBXGroup;
 			children = (
-				3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */,
+				3003F3712FBC682B0058EE20 /* H2S Hit to Strong */,
 				74D649C22F1EB38000124720 /* Products */,
 				B4D73361A763E394EBD88EA6 /* Pods */,
 				6CD66F14AF1A82C68B3ABE3B /* Frameworks */,
@@ -90,9 +222,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */,
 			);
 			name = "H2S Hit to Strong";
 			productName = "H2S Hit to Strong";
@@ -137,6 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3003F3912FBC682B0058EE20 /* Assets.xcassets in Resources */,
+				3003F3932FBC682B0058EE20 /* LaunchScreen.storyboard in Resources */,
+				3003F3942FBC682B0058EE20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +304,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3003F3722FBC682B0058EE20 /* ProgramManager.swift in Sources */,
+				3003F3732FBC682B0058EE20 /* RecordsManager.swift in Sources */,
+				3003F3742FBC682B0058EE20 /* SessionManager.swift in Sources */,
+				3003F3752FBC682B0058EE20 /* WorkoutManager.swift in Sources */,
+				3003F3762FBC682B0058EE20 /* Strike.swift in Sources */,
+				3003F3772FBC682B0058EE20 /* AppRouter.swift in Sources */,
+				3003F3782FBC682B0058EE20 /* PersistenceManager.swift in Sources */,
+				3003F3792FBC682B0058EE20 /* PrivacyWebView.swift in Sources */,
+				3003F37A2FBC682B0058EE20 /* SaveService.swift in Sources */,
+				3003F37B2FBC682B0058EE20 /* StartMainView.swift in Sources */,
+				3003F37C2FBC682B0058EE20 /* AchievementsView.swift in Sources */,
+				3003F37D2FBC682B0058EE20 /* AddStrikeView.swift in Sources */,
+				3003F37E2FBC682B0058EE20 /* AppBackgroundView.swift in Sources */,
+				3003F37F2FBC682B0058EE20 /* AppDesign.swift in Sources */,
+				3003F3802FBC682B0058EE20 /* CustomWorkoutsView.swift in Sources */,
+				3003F3812FBC682B0058EE20 /* HomeView.swift in Sources */,
+				3003F3822FBC682B0058EE20 /* LiveSessionView.swift in Sources */,
+				3003F3832FBC682B0058EE20 /* OnboardingView.swift in Sources */,
+				3003F3842FBC682B0058EE20 /* ProgressView.swift in Sources */,
+				3003F3852FBC682B0058EE20 /* RecordsView.swift in Sources */,
+				3003F3862FBC682B0058EE20 /* SessionHistoryView.swift in Sources */,
+				3003F3872FBC682B0058EE20 /* SettingsView.swift in Sources */,
+				3003F3882FBC682B0058EE20 /* StrikeAnalysisView.swift in Sources */,
+				3003F3892FBC682B0058EE20 /* StrikeComparisonView.swift in Sources */,
+				3003F38A2FBC682B0058EE20 /* TrainingDashboardView.swift in Sources */,
+				3003F38B2FBC682B0058EE20 /* TrainingProgramsView.swift in Sources */,
+				3003F38C2FBC682B0058EE20 /* TrainingTimerView.swift in Sources */,
+				3003F38D2FBC682B0058EE20 /* AppDelegate.swift in Sources */,
+				3003F38E2FBC682B0058EE20 /* ContentView.swift in Sources */,
+				3003F38F2FBC682B0058EE20 /* SceneDelegate.swift in Sources */,
+				3003F3902FBC682B0058EE20 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3003F36C2FBC682B0058EE20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3003F36B2FBC682B0058EE20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3003F36E2FBC682B0058EE20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3003F36D2FBC682B0058EE20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		74D649D52F1EB38100124720 /* Debug */ = {
