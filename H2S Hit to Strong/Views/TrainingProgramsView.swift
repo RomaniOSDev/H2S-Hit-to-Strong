@@ -16,8 +16,7 @@ struct TrainingProgramsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -112,18 +111,10 @@ struct ActiveProgramCard: View {
             }
             
             // Progress bar
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(Color.white.opacity(0.1))
-                        .frame(height: 8)
-                    
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(Color(hex: "24CFA4"))
-                        .frame(width: geometry.size.width * (Double(currentDay) / Double(program.duration)), height: 8)
-                }
-            }
-            .frame(height: 8)
+            GradientProgressBar(
+                progress: Double(currentDay) / Double(program.duration),
+                accent: AppTheme.teal
+            )
             
             if let session = program.sessions.first(where: { $0.day == currentDay }) {
                 HStack {
@@ -135,14 +126,7 @@ struct ActiveProgramCard: View {
             }
         }
         .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(hex: "24CFA4").opacity(0.1))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color(hex: "24CFA4"), lineWidth: 2)
-                )
-        )
+        .elevatedCard(accent: AppTheme.teal, cornerRadius: 16)
     }
 }
 
@@ -180,10 +164,7 @@ struct ProgramCard: View {
                 .foregroundColor(.white.opacity(0.5))
             }
             .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.white.opacity(0.05))
-            )
+            .glassCard(accent: AppTheme.teal, cornerRadius: 14)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -193,12 +174,13 @@ struct ProgramDetailView: View {
     let program: TrainingProgram
     @StateObject private var programManager = ProgramManager.shared
     @Environment(\.dismiss) var dismiss
+    @State private var showEditProgram = false
+    @State private var showDeleteConfirm = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -241,20 +223,39 @@ struct ProgramDetailView: View {
                         .padding(.horizontal, 20)
                         
                         // Start button
-                        Button(action: {
+                        Button(programManager.activeProgram?.id == program.id ? "Continue Program" : "Start Program") {
                             programManager.startProgram(program)
                             dismiss()
-                        }) {
-                            Text(programManager.activeProgram?.id == program.id ? "Continue Program" : "Start Program")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(Color(hex: "24CFA4"))
-                                .cornerRadius(12)
                         }
+                        .buttonStyle(PrimaryGradientButtonStyle())
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 40)
+                        
+                        if program.isCustom {
+                            HStack(spacing: 12) {
+                                Button(action: { showEditProgram = true }) {
+                                    Label("Edit", systemImage: "pencil")
+                                        .font(.system(size: 16, weight: .semibold))
+                                        .foregroundColor(Color(hex: "24CFA4"))
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.vertical, 14)
+                                        .background(Color(hex: "24CFA4").opacity(0.15))
+                                        .cornerRadius(12)
+                                }
+                                
+                                Button(action: { showDeleteConfirm = true }) {
+                                    Label("Delete", systemImage: "trash")
+                                        .font(.system(size: 16, weight: .semibold))
+                                        .foregroundColor(.red)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.vertical, 14)
+                                        .background(Color.red.opacity(0.15))
+                                        .cornerRadius(12)
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                        }
+                        
+                        Spacer(minLength: 40)
                     }
                 }
             }
@@ -267,6 +268,18 @@ struct ProgramDetailView: View {
                     }
                     .foregroundColor(Color(hex: "24CFA4"))
                 }
+            }
+            .sheet(isPresented: $showEditProgram) {
+                CreateProgramView(editingProgram: program)
+            }
+            .alert("Delete Program?", isPresented: $showDeleteConfirm) {
+                Button("Delete", role: .destructive) {
+                    programManager.deleteProgram(program)
+                    dismiss()
+                }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("\"\(program.name)\" will be permanently deleted.")
             }
         }
     }
@@ -304,33 +317,54 @@ struct ProgramSessionRow: View {
                 .cornerRadius(6)
         }
         .padding(12)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: AppTheme.teal, cornerRadius: 10)
+    }
+}
+
+enum ProgramDifficulty: String, CaseIterable {
+    case beginner = "Beginner"
+    case intermediate = "Intermediate"
+    case advanced = "Advanced"
+    
+    var baseStrikes: Int {
+        switch self {
+        case .beginner: return 20
+        case .intermediate: return 35
+        case .advanced: return 50
+        }
+    }
+    
+    var baseH2S: Double {
+        switch self {
+        case .beginner: return 60
+        case .intermediate: return 72
+        case .advanced: return 82
+        }
     }
 }
 
 struct CreateProgramView: View {
+    var editingProgram: TrainingProgram? = nil
+    
     @StateObject private var programManager = ProgramManager.shared
     @Environment(\.dismiss) var dismiss
     @State private var name = ""
     @State private var description = ""
     @State private var duration = 7
+    @State private var difficulty: ProgramDifficulty = .intermediate
+    @State private var defaultMode: TrainingMode = .shadowBoxing
+    @State private var useProgressive = true
+    @State private var alternateModes = true
+    
+    private var isEditing: Bool { editingProgram != nil }
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
-                        Text("Create Custom Program")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.top, 20)
-                        
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Program Name")
                                 .font(.system(size: 16, weight: .semibold))
@@ -359,60 +393,174 @@ struct CreateProgramView: View {
                                 .labelsHidden()
                         }
                         
-                        Button(action: {
-                            let sessions = (1...duration).map { day in
-                                TrainingProgram.ProgramSession(
-                                    day: day,
-                                    targetStrikes: 30,
-                                    targetH2SIndex: 70.0,
-                                    mode: day % 2 == 0 ? .bagWork : .shadowBoxing
-                                )
-                            }
-                            
-                            programManager.createCustomProgram(
-                                name: name,
-                                description: description,
-                                duration: duration,
-                                sessions: sessions
-                            )
-                            dismiss()
-                        }) {
-                            Text("Create Program")
-                                .font(.system(size: 18, weight: .semibold))
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Difficulty")
+                                .font(.system(size: 16, weight: .semibold))
                                 .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(name.isEmpty ? Color.gray : Color(hex: "24CFA4"))
-                                .cornerRadius(12)
+                            
+                            Picker("Difficulty", selection: $difficulty) {
+                                ForEach(ProgramDifficulty.allCases, id: \.self) { level in
+                                    Text(level.rawValue).tag(level)
+                                }
+                            }
+                            .pickerStyle(.segmented)
                         }
-                        .disabled(name.isEmpty)
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Default Mode")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.white)
+                            
+                            Picker("Mode", selection: $defaultMode) {
+                                Text("Shadow Boxing").tag(TrainingMode.shadowBoxing)
+                                Text("Bag Work").tag(TrainingMode.bagWork)
+                            }
+                            .pickerStyle(.segmented)
+                        }
+                        
+                        Toggle(isOn: $useProgressive) {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Progressive Goals")
+                                    .font(.system(size: 15, weight: .medium))
+                                    .foregroundColor(.white)
+                                Text("Increase targets each day")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white.opacity(0.5))
+                            }
+                        }
+                        .tint(Color(hex: "24CFA4"))
+                        
+                        Toggle(isOn: $alternateModes) {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Alternate Modes")
+                                    .font(.system(size: 15, weight: .medium))
+                                    .foregroundColor(.white)
+                                Text("Switch between shadow and bag")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white.opacity(0.5))
+                            }
+                        }
+                        .tint(Color(hex: "24CFA4"))
+                        
+                        sessionPreview
+                        
+                        Button(isEditing ? "Save Changes" : "Create Program") { saveProgram() }
+                            .buttonStyle(PrimaryGradientButtonStyle())
+                            .disabled(name.isEmpty)
+                            .opacity(name.isEmpty ? 0.5 : 1)
                         .padding(.bottom, 40)
                     }
                     .padding(20)
                 }
             }
+            .navigationTitle(isEditing ? "Edit Program" : "New Program")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
                         dismiss()
                     }
                     .foregroundColor(.white.opacity(0.7))
                 }
             }
+            .onAppear { loadProgram() }
         }
+    }
+    
+    private var sessionPreview: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Preview (Day 1 → Day \(duration))")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.white.opacity(0.7))
+            
+            let sessions = buildSessions()
+            if let first = sessions.first, let last = sessions.last {
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Day 1")
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundColor(Color(hex: "24CFA4"))
+                        Text("\(first.targetStrikes) strikes · H2S \(Int(first.targetH2SIndex))")
+                            .font(.system(size: 12))
+                            .foregroundColor(.white.opacity(0.6))
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                        .foregroundColor(.white.opacity(0.3))
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text("Day \(duration)")
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundColor(Color(hex: "8B309C"))
+                        Text("\(last.targetStrikes) strikes · H2S \(Int(last.targetH2SIndex))")
+                            .font(.system(size: 12))
+                            .foregroundColor(.white.opacity(0.6))
+                    }
+                }
+                .padding(14)
+                .glassCard(accent: AppTheme.purple, cornerRadius: 10)
+            }
+        }
+    }
+    
+    private func buildSessions() -> [TrainingProgram.ProgramSession] {
+        (1...duration).map { day in
+            let progress = useProgressive ? Double(day - 1) / Double(max(duration - 1, 1)) : 0
+            let strikes = difficulty.baseStrikes + Int(progress * Double(difficulty.baseStrikes))
+            let h2s = difficulty.baseH2S + progress * 15
+            
+            let mode: TrainingMode
+            if alternateModes {
+                mode = day % 2 == 0 ? .bagWork : .shadowBoxing
+            } else {
+                mode = defaultMode
+            }
+            
+            return TrainingProgram.ProgramSession(
+                day: day,
+                targetStrikes: strikes,
+                targetH2SIndex: min(h2s, 95),
+                mode: mode
+            )
+        }
+    }
+    
+    private func loadProgram() {
+        guard let program = editingProgram else { return }
+        name = program.name
+        description = program.description
+        duration = program.duration
+        if let first = program.sessions.first {
+            defaultMode = first.mode
+        }
+    }
+    
+    private func saveProgram() {
+        let sessions = buildSessions()
+        
+        if let existing = editingProgram {
+            let updated = TrainingProgram(
+                id: existing.id,
+                name: name,
+                description: description,
+                duration: duration,
+                sessions: sessions,
+                isCustom: true
+            )
+            programManager.updateProgram(updated)
+        } else {
+            programManager.createCustomProgram(
+                name: name,
+                description: description,
+                duration: duration,
+                sessions: sessions
+            )
+        }
+        dismiss()
     }
 }
 
-struct CustomTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(12)
-            .background(Color.white.opacity(0.05))
-            .cornerRadius(8)
-            .foregroundColor(.white)
-    }
-}
+typealias CustomTextFieldStyle = AppTextFieldStyle
 
 #Preview {
     TrainingProgramsView()

@@ -3,76 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		74BA26632F1FE642005A2C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BA26592F1FE642005A2C34 /* Assets.xcassets */; };
-		74BA26652F1FE642005A2C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */; };
-		74BA26662F1FE642005A2C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BA265F2F1FE642005A2C34 /* Main.storyboard */; };
-		74BA26672F1FE642005A2C34 /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26402F1FE642005A2C34 /* ProgramManager.swift */; };
-		74BA26682F1FE642005A2C34 /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26412F1FE642005A2C34 /* RecordsManager.swift */; };
-		74BA26692F1FE642005A2C34 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26422F1FE642005A2C34 /* SessionManager.swift */; };
-		74BA266A2F1FE642005A2C34 /* Strike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26442F1FE642005A2C34 /* Strike.swift */; };
-		74BA266B2F1FE642005A2C34 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26462F1FE642005A2C34 /* CheckLink.swift */; };
-		74BA266C2F1FE642005A2C34 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26472F1FE642005A2C34 /* InternetViewController.swift */; };
-		74BA266D2F1FE642005A2C34 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26482F1FE642005A2C34 /* LoaderViewController.swift */; };
-		74BA266E2F1FE642005A2C34 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264A2F1FE642005A2C34 /* AchievementsView.swift */; };
-		74BA266F2F1FE642005A2C34 /* AddStrikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */; };
-		74BA26702F1FE642005A2C34 /* LiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */; };
-		74BA26712F1FE642005A2C34 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264D2F1FE642005A2C34 /* OnboardingView.swift */; };
-		74BA26722F1FE642005A2C34 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264E2F1FE642005A2C34 /* ProgressView.swift */; };
-		74BA26732F1FE642005A2C34 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA264F2F1FE642005A2C34 /* RecordsView.swift */; };
-		74BA26742F1FE642005A2C34 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */; };
-		74BA26752F1FE642005A2C34 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26512F1FE642005A2C34 /* SettingsView.swift */; };
-		74BA26762F1FE642005A2C34 /* StrikeAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */; };
-		74BA26772F1FE642005A2C34 /* StrikeComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */; };
-		74BA26782F1FE642005A2C34 /* TrainingDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */; };
-		74BA26792F1FE642005A2C34 /* TrainingProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */; };
-		74BA267A2F1FE642005A2C34 /* TrainingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */; };
-		74BA267B2F1FE642005A2C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26582F1FE642005A2C34 /* AppDelegate.swift */; };
-		74BA267C2F1FE642005A2C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA265A2F1FE642005A2C34 /* ContentView.swift */; };
-		74BA267D2F1FE642005A2C34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26602F1FE642005A2C34 /* SceneDelegate.swift */; };
-		74BA267E2F1FE642005A2C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA26612F1FE642005A2C34 /* ViewController.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		3BDE808F0E20E5EC6E86D2A3 /* Pods-H2S: Hit to Strong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S: Hit to Strong.debug.xcconfig"; path = "Target Support Files/Pods-H2S: Hit to Strong/Pods-H2S: Hit to Strong.debug.xcconfig"; sourceTree = "<group>"; };
 		654FEDEA0268088EBD220AFF /* Pods_H2S__Hit_to_Strong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H2S__Hit_to_Strong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7383B8311981BAB78BE6021F /* Pods-H2S Hit to Strong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S Hit to Strong.release.xcconfig"; path = "Target Support Files/Pods-H2S Hit to Strong/Pods-H2S Hit to Strong.release.xcconfig"; sourceTree = "<group>"; };
-		74BA26402F1FE642005A2C34 /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
-		74BA26412F1FE642005A2C34 /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
-		74BA26422F1FE642005A2C34 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		74BA26442F1FE642005A2C34 /* Strike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strike.swift; sourceTree = "<group>"; };
-		74BA26462F1FE642005A2C34 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
-		74BA26472F1FE642005A2C34 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
-		74BA26482F1FE642005A2C34 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
-		74BA264A2F1FE642005A2C34 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
-		74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStrikeView.swift; sourceTree = "<group>"; };
-		74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionView.swift; sourceTree = "<group>"; };
-		74BA264D2F1FE642005A2C34 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		74BA264E2F1FE642005A2C34 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		74BA264F2F1FE642005A2C34 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
-		74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
-		74BA26512F1FE642005A2C34 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeAnalysisView.swift; sourceTree = "<group>"; };
-		74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeComparisonView.swift; sourceTree = "<group>"; };
-		74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDashboardView.swift; sourceTree = "<group>"; };
-		74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramsView.swift; sourceTree = "<group>"; };
-		74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerView.swift; sourceTree = "<group>"; };
-		74BA26582F1FE642005A2C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74BA26592F1FE642005A2C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		74BA265A2F1FE642005A2C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		74BA265B2F1FE642005A2C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74BA265C2F1FE642005A2C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		74BA265E2F1FE642005A2C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		74BA26602F1FE642005A2C34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74BA26612F1FE642005A2C34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74D649C12F1EB38000124720 /* H2S Hit to Strong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H2S Hit to Strong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88589AA58A8B1D3567F8895D /* Pods_H2S_Hit_to_Strong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H2S_Hit_to_Strong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2FC92D0B3582C15C292D320 /* Pods-H2S: Hit to Strong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S: Hit to Strong.release.xcconfig"; path = "Target Support Files/Pods-H2S: Hit to Strong/Pods-H2S: Hit to Strong.release.xcconfig"; sourceTree = "<group>"; };
 		D34819DC88FC4EAF4DA2F4B9 /* Pods-H2S Hit to Strong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2S Hit to Strong.debug.xcconfig"; path = "Target Support Files/Pods-H2S Hit to Strong/Pods-H2S Hit to Strong.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3003F2FD2FBC59A40058EE20 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 74D649C02F1EB38000124720 /* H2S Hit to Strong */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (3003F2FD2FBC59A40058EE20 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "H2S Hit to Strong"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		74D649BE2F1EB38000124720 /* Frameworks */ = {
@@ -94,77 +48,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		74BA26432F1FE642005A2C34 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				74BA26402F1FE642005A2C34 /* ProgramManager.swift */,
-				74BA26412F1FE642005A2C34 /* RecordsManager.swift */,
-				74BA26422F1FE642005A2C34 /* SessionManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		74BA26452F1FE642005A2C34 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				74BA26442F1FE642005A2C34 /* Strike.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		74BA26492F1FE642005A2C34 /* LoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				74BA26462F1FE642005A2C34 /* CheckLink.swift */,
-				74BA26472F1FE642005A2C34 /* InternetViewController.swift */,
-				74BA26482F1FE642005A2C34 /* LoaderViewController.swift */,
-			);
-			path = LoadingView;
-			sourceTree = "<group>";
-		};
-		74BA26572F1FE642005A2C34 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				74BA26492F1FE642005A2C34 /* LoadingView */,
-				74BA264A2F1FE642005A2C34 /* AchievementsView.swift */,
-				74BA264B2F1FE642005A2C34 /* AddStrikeView.swift */,
-				74BA264C2F1FE642005A2C34 /* LiveSessionView.swift */,
-				74BA264D2F1FE642005A2C34 /* OnboardingView.swift */,
-				74BA264E2F1FE642005A2C34 /* ProgressView.swift */,
-				74BA264F2F1FE642005A2C34 /* RecordsView.swift */,
-				74BA26502F1FE642005A2C34 /* SessionHistoryView.swift */,
-				74BA26512F1FE642005A2C34 /* SettingsView.swift */,
-				74BA26522F1FE642005A2C34 /* StrikeAnalysisView.swift */,
-				74BA26532F1FE642005A2C34 /* StrikeComparisonView.swift */,
-				74BA26542F1FE642005A2C34 /* TrainingDashboardView.swift */,
-				74BA26552F1FE642005A2C34 /* TrainingProgramsView.swift */,
-				74BA26562F1FE642005A2C34 /* TrainingTimerView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		74BA26622F1FE642005A2C34 /* H2S Hit to Strong */ = {
-			isa = PBXGroup;
-			children = (
-				74BA26432F1FE642005A2C34 /* Managers */,
-				74BA26452F1FE642005A2C34 /* Models */,
-				74BA26572F1FE642005A2C34 /* Views */,
-				74BA26582F1FE642005A2C34 /* AppDelegate.swift */,
-				74BA26592F1FE642005A2C34 /* Assets.xcassets */,
-				74BA265A2F1FE642005A2C34 /* ContentView.swift */,
-				74BA265B2F1FE642005A2C34 /* Info.plist */,
-				74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */,
-				74BA265F2F1FE642005A2C34 /* Main.storyboard */,
-				74BA26602F1FE642005A2C34 /* SceneDelegate.swift */,
-				74BA26612F1FE642005A2C34 /* ViewController.swift */,
-			);
-			path = "H2S Hit to Strong";
-			sourceTree = "<group>";
-		};
 		74D649B82F1EB38000124720 = {
 			isa = PBXGroup;
 			children = (
-				74BA26622F1FE642005A2C34 /* H2S Hit to Strong */,
+				3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */,
 				74D649C22F1EB38000124720 /* Products */,
 				B4D73361A763E394EBD88EA6 /* Pods */,
 				6CD66F14AF1A82C68B3ABE3B /* Frameworks */,
@@ -182,8 +69,6 @@
 		B4D73361A763E394EBD88EA6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3BDE808F0E20E5EC6E86D2A3 /* Pods-H2S: Hit to Strong.debug.xcconfig */,
-				D2FC92D0B3582C15C292D320 /* Pods-H2S: Hit to Strong.release.xcconfig */,
 				D34819DC88FC4EAF4DA2F4B9 /* Pods-H2S Hit to Strong.debug.xcconfig */,
 				7383B8311981BAB78BE6021F /* Pods-H2S Hit to Strong.release.xcconfig */,
 			);
@@ -205,6 +90,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3003F2DE2FBC59A30058EE20 /* H2S Hit to Strong */,
 			);
 			name = "H2S Hit to Strong";
 			productName = "H2S Hit to Strong";
@@ -249,9 +137,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74BA26632F1FE642005A2C34 /* Assets.xcassets in Resources */,
-				74BA26652F1FE642005A2C34 /* LaunchScreen.storyboard in Resources */,
-				74BA26662F1FE642005A2C34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,53 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74BA26672F1FE642005A2C34 /* ProgramManager.swift in Sources */,
-				74BA26682F1FE642005A2C34 /* RecordsManager.swift in Sources */,
-				74BA26692F1FE642005A2C34 /* SessionManager.swift in Sources */,
-				74BA266A2F1FE642005A2C34 /* Strike.swift in Sources */,
-				74BA266B2F1FE642005A2C34 /* CheckLink.swift in Sources */,
-				74BA266C2F1FE642005A2C34 /* InternetViewController.swift in Sources */,
-				74BA266D2F1FE642005A2C34 /* LoaderViewController.swift in Sources */,
-				74BA266E2F1FE642005A2C34 /* AchievementsView.swift in Sources */,
-				74BA266F2F1FE642005A2C34 /* AddStrikeView.swift in Sources */,
-				74BA26702F1FE642005A2C34 /* LiveSessionView.swift in Sources */,
-				74BA26712F1FE642005A2C34 /* OnboardingView.swift in Sources */,
-				74BA26722F1FE642005A2C34 /* ProgressView.swift in Sources */,
-				74BA26732F1FE642005A2C34 /* RecordsView.swift in Sources */,
-				74BA26742F1FE642005A2C34 /* SessionHistoryView.swift in Sources */,
-				74BA26752F1FE642005A2C34 /* SettingsView.swift in Sources */,
-				74BA26762F1FE642005A2C34 /* StrikeAnalysisView.swift in Sources */,
-				74BA26772F1FE642005A2C34 /* StrikeComparisonView.swift in Sources */,
-				74BA26782F1FE642005A2C34 /* TrainingDashboardView.swift in Sources */,
-				74BA26792F1FE642005A2C34 /* TrainingProgramsView.swift in Sources */,
-				74BA267A2F1FE642005A2C34 /* TrainingTimerView.swift in Sources */,
-				74BA267B2F1FE642005A2C34 /* AppDelegate.swift in Sources */,
-				74BA267C2F1FE642005A2C34 /* ContentView.swift in Sources */,
-				74BA267D2F1FE642005A2C34 /* SceneDelegate.swift in Sources */,
-				74BA267E2F1FE642005A2C34 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		74BA265D2F1FE642005A2C34 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74BA265C2F1FE642005A2C34 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		74BA265F2F1FE642005A2C34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74BA265E2F1FE642005A2C34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		74D649D52F1EB38100124720 /* Debug */ = {
@@ -343,7 +185,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ArcanaSpreads&Write";
@@ -382,7 +224,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "H2S Hit to Strong/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ArcanaSpreads&Write";

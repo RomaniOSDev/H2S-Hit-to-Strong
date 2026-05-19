@@ -15,8 +15,7 @@ struct TrainingTimerView: View {
     
     var body: some View {
         ZStack {
-            Color(hex: "0E0D12")
-                .ignoresSafeArea()
+            AppBackgroundView(style: .sheet)
             
             VStack(spacing: 30) {
                 // Header
@@ -25,9 +24,8 @@ struct TrainingTimerView: View {
                         Image(systemName: "xmark")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.white)
-                            .padding(12)
-                            .background(Color.white.opacity(0.1))
-                            .clipShape(Circle())
+                            .frame(width: 44, height: 44)
+                            .glassCard(accent: AppTheme.teal, cornerRadius: 22)
                     }
                     
                     Spacer()
@@ -42,9 +40,8 @@ struct TrainingTimerView: View {
                         Image(systemName: "arrow.counterclockwise")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.white)
-                            .padding(12)
-                            .background(Color.white.opacity(0.1))
-                            .clipShape(Circle())
+                            .frame(width: 44, height: 44)
+                            .glassCard(accent: AppTheme.purple, cornerRadius: 22)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -230,8 +227,7 @@ struct TimerSettingButton: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)
-            .background(Color.white.opacity(0.05))
-            .cornerRadius(12)
+            .glassCard(accent: color, cornerRadius: 12)
         }
     }
 }
@@ -246,8 +242,7 @@ struct TimerSettingsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 VStack(spacing: 30) {
                     Text(title)

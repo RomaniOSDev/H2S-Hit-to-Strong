@@ -17,8 +17,7 @@ struct StrikeComparisonView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 if strike1 == nil || strike2 == nil {
                     VStack(spacing: 20) {
@@ -113,10 +112,7 @@ struct StrikeComparisonView: View {
                                     }
                                 }
                                 .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white.opacity(0.05))
-                                )
+                                .glassCard(accent: AppTheme.purple, cornerRadius: 14)
                             }
                             .padding(.horizontal, 20)
                             
@@ -205,10 +201,7 @@ struct StrikeSelectionRow: View {
                 }
             }
             .padding(12)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.05))
-            )
+            .glassCard(accent: AppTheme.teal, cornerRadius: 10)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -298,10 +291,7 @@ struct ComparisonMetric: View {
             }
         }
         .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: AppTheme.teal, cornerRadius: 14)
     }
 }
 

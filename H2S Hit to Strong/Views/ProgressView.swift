@@ -21,8 +21,7 @@ struct TrainingProgressView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -85,10 +84,7 @@ struct TrainingProgressView: View {
                                     }
                                 }
                                 .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white.opacity(0.05))
-                                )
+                                .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                             } else {
                                 VStack(spacing: 12) {
                                     Image(systemName: "chart.line.uptrend.xyaxis")
@@ -105,10 +101,7 @@ struct TrainingProgressView: View {
                                 }
                                 .frame(height: 200)
                                 .frame(maxWidth: .infinity)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white.opacity(0.05))
-                                )
+                                .glassCard(accent: AppTheme.purple, cornerRadius: 14)
                             }
                         }
                         .padding(.horizontal, 20)
@@ -131,9 +124,7 @@ struct TrainingProgressView: View {
                         
                         // Goals Section
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Goals")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
+                            AppSectionTitle(title: "Goals", accent: AppTheme.teal)
                             
                             GoalCard(
                                 title: "Increase average strike force by 15%",
@@ -205,10 +196,7 @@ struct ProgressStatCard: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 
@@ -238,24 +226,10 @@ struct GoalCard: View {
                     .foregroundColor(color)
             }
             
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(Color.white.opacity(0.1))
-                        .frame(height: 6)
-                    
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(color)
-                        .frame(width: geometry.size.width * progress, height: 6)
-                }
-            }
-            .frame(height: 6)
+            GradientProgressBar(progress: progress, accent: color)
         }
         .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 

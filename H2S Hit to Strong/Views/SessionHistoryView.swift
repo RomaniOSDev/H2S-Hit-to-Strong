@@ -24,8 +24,7 @@ struct SessionHistoryView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 if filteredSessions.isEmpty {
                     VStack(spacing: 20) {
@@ -98,15 +97,8 @@ struct FilterButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(isSelected ? .white : .white.opacity(0.7))
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(isSelected ? Color(hex: "24CFA4") : Color.white.opacity(0.1))
-                )
         }
+        .buttonStyle(FilterChipStyle(isSelected: isSelected))
     }
 }
 
@@ -150,14 +142,7 @@ struct SessionCard: View {
                 }
             }
             .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.white.opacity(0.05))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.white.opacity(0.1), lineWidth: 1)
-                    )
-            )
+            .glassCard(accent: AppTheme.teal, cornerRadius: 14)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -201,8 +186,7 @@ struct SessionDetailView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 20) {
@@ -295,10 +279,7 @@ struct SessionStatCard: View {
         }
         .frame(maxWidth: .infinity)
         .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 
@@ -332,10 +313,7 @@ struct StrikeRow: View {
                 }
             }
             .padding(12)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.05))
-            )
+            .glassCard(accent: AppTheme.purple, cornerRadius: 10)
         }
         .buttonStyle(PlainButtonStyle())
     }

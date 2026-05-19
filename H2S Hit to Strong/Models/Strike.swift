@@ -68,6 +68,53 @@ enum TrainingMode: String, Codable {
     case bagWork = "Phone mounted"
 }
 
+// MARK: - Custom Workout
+struct CustomWorkout: Identifiable, Codable, Equatable {
+    let id: UUID
+    var name: String
+    var description: String
+    var mode: TrainingMode
+    var targetStrikes: Int
+    var targetH2SIndex: Double
+    var createdAt: Date
+    
+    static let presets: [CustomWorkout] = [
+        CustomWorkout(
+            id: UUID(),
+            name: "Quick Warm-up",
+            description: "Light session to get moving",
+            mode: .shadowBoxing,
+            targetStrikes: 20,
+            targetH2SIndex: 60,
+            createdAt: Date()
+        ),
+        CustomWorkout(
+            id: UUID(),
+            name: "Power Session",
+            description: "Focus on strike force",
+            mode: .bagWork,
+            targetStrikes: 40,
+            targetH2SIndex: 75,
+            createdAt: Date()
+        ),
+        CustomWorkout(
+            id: UUID(),
+            name: "Technique Drill",
+            description: "Speed and form practice",
+            mode: .shadowBoxing,
+            targetStrikes: 30,
+            targetH2SIndex: 80,
+            createdAt: Date()
+        )
+    ]
+}
+
+struct WorkoutGoals: Equatable {
+    let workoutName: String
+    let targetStrikes: Int
+    let targetH2SIndex: Double
+}
+
 // MARK: - Training Program
 struct TrainingProgram: Identifiable, Codable {
     let id: UUID

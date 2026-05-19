@@ -14,8 +14,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 0) {
@@ -71,6 +70,7 @@ struct SettingsView: View {
                                 openTerms()
                             }
                         }
+                        .glassCard(accent: AppTheme.teal, cornerRadius: 16)
                         .padding(.horizontal, 20)
                         .padding(.bottom, 40)
                     }
@@ -134,7 +134,6 @@ struct SettingsRow: View {
             }
             .padding(.vertical, 16)
             .padding(.horizontal, 20)
-            .background(Color.white.opacity(0.05))
         }
         .buttonStyle(PlainButtonStyle())
     }

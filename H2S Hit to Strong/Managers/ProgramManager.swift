@@ -55,6 +55,32 @@ class ProgramManager: ObservableObject {
         savePrograms()
     }
     
+    func updateProgram(_ program: TrainingProgram) {
+        guard let index = programs.firstIndex(where: { $0.id == program.id }) else { return }
+        programs[index] = program
+        if activeProgram?.id == program.id {
+            activeProgram = program
+            saveActiveProgram()
+        }
+        savePrograms()
+    }
+    
+    func deleteProgram(_ program: TrainingProgram) {
+        programs.removeAll { $0.id == program.id }
+        if activeProgram?.id == program.id {
+            activeProgram = nil
+            currentDay = 1
+            saveActiveProgram()
+        }
+        savePrograms()
+    }
+    
+    func stopProgram() {
+        activeProgram = nil
+        currentDay = 1
+        saveActiveProgram()
+    }
+    
     func getCurrentSession() -> TrainingProgram.ProgramSession? {
         guard let program = activeProgram,
               currentDay <= program.sessions.count else { return nil }

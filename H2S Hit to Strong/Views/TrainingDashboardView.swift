@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TrainingDashboardView: View {
+    @StateObject private var workoutManager = WorkoutManager.shared
     @State private var selectedMode: TrainingMode?
     @State private var showProgress = false
     @State private var showHistory = false
@@ -17,11 +18,11 @@ struct TrainingDashboardView: View {
     @State private var showTimer = false
     @State private var showComparison = false
     @State private var showSettings = false
+    @State private var showCustomWorkouts = false
     
     var body: some View {
         ZStack {
-            Color(hex: "0E0D12")
-                .ignoresSafeArea()
+            AppBackgroundView()
             
             VStack(spacing: 30) {
                 // Header
@@ -43,9 +44,8 @@ struct TrainingDashboardView: View {
                             Image(systemName: "gearshape.fill")
                                 .font(.system(size: 20))
                                 .foregroundColor(Color(hex: "24CFA4"))
-                                .padding(12)
-                                .background(Color.white.opacity(0.1))
-                                .clipShape(Circle())
+                                .frame(width: 44, height: 44)
+                                .glassCard(accent: AppTheme.teal, cornerRadius: 22)
                         }
                         
                         Menu {
@@ -61,6 +61,9 @@ struct TrainingDashboardView: View {
                             Button(action: { showPrograms = true }) {
                                 Label("Programs", systemImage: "list.bullet")
                             }
+                            Button(action: { showCustomWorkouts = true }) {
+                                Label("My Workouts", systemImage: "figure.boxing")
+                            }
                             Button(action: { showAchievements = true }) {
                                 Label("Achievements", systemImage: "star.fill")
                             }
@@ -74,9 +77,8 @@ struct TrainingDashboardView: View {
                             Image(systemName: "ellipsis.circle")
                                 .font(.system(size: 20))
                                 .foregroundColor(Color(hex: "24CFA4"))
-                                .padding(12)
-                                .background(Color.white.opacity(0.1))
-                                .clipShape(Circle())
+                                .frame(width: 44, height: 44)
+                                .glassCard(accent: AppTheme.teal, cornerRadius: 22)
                         }
                     }
                 }
@@ -84,6 +86,43 @@ struct TrainingDashboardView: View {
                 .padding(.top, 60)
                 
                 Spacer()
+                
+                // My Workouts shortcut
+                Button(action: { showCustomWorkouts = true }) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "figure.boxing")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color(hex: "24CFA4"))
+                        
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("My Workouts")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.white)
+                            Text(workoutManager.workouts.isEmpty
+                                 ? "Create your own training"
+                                 : "\(workoutManager.workouts.count) saved · tap to start")
+                                .font(.system(size: 12))
+                                .foregroundColor(.white.opacity(0.5))
+                        }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundColor(.white.opacity(0.4))
+                    }
+                    .padding(16)
+                    .background(
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(Color(hex: "24CFA4").opacity(0.08))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 14)
+                                    .stroke(Color(hex: "24CFA4").opacity(0.25), lineWidth: 1)
+                            )
+                    )
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding(.horizontal, 24)
                 
                 // Training Mode Cards
                 VStack(spacing: 20) {
@@ -139,6 +178,9 @@ struct TrainingDashboardView: View {
         .sheet(isPresented: $showSettings) {
             SettingsView()
         }
+        .sheet(isPresented: $showCustomWorkouts) {
+            CustomWorkoutsView()
+        }
     }
 }
 
@@ -181,14 +223,7 @@ struct TrainingModeCard: View {
                 }
             }
             .padding(20)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.white.opacity(0.05))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(color.opacity(0.3), lineWidth: 1)
-                    )
-            )
+            .glassCard(accent: color, cornerRadius: 16)
         }
         .buttonStyle(PlainButtonStyle())
     }

@@ -22,8 +22,7 @@ struct AchievementsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -37,18 +36,11 @@ struct AchievementsView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(.white.opacity(0.7))
                             
-                            GeometryReader { geometry in
-                                ZStack(alignment: .leading) {
-                                    RoundedRectangle(cornerRadius: 4)
-                                        .fill(Color.white.opacity(0.1))
-                                        .frame(height: 8)
-                                    
-                                    RoundedRectangle(cornerRadius: 4)
-                                        .fill(Color(hex: "24CFA4"))
-                                        .frame(width: geometry.size.width * (Double(unlockedAchievements.count) / Double(recordsManager.achievements.count)), height: 8)
-                                }
-                            }
-                            .frame(height: 8)
+                            GradientProgressBar(
+                                progress: Double(unlockedAchievements.count) / Double(max(recordsManager.achievements.count, 1)),
+                                accent: AppTheme.teal,
+                                height: 8
+                            )
                             .padding(.horizontal, 40)
                         }
                         .padding(.top, 20)
@@ -56,9 +48,7 @@ struct AchievementsView: View {
                         // Unlocked Achievements
                         if !unlockedAchievements.isEmpty {
                             VStack(alignment: .leading, spacing: 16) {
-                                Text("Unlocked")
-                                    .font(.system(size: 20, weight: .bold))
-                                    .foregroundColor(.white)
+                                AppSectionTitle(title: "Unlocked", accent: AppTheme.teal)
                                 
                                 ForEach(unlockedAchievements) { achievement in
                                     AchievementCard(achievement: achievement, isUnlocked: true)
@@ -70,9 +60,7 @@ struct AchievementsView: View {
                         // Locked Achievements
                         if !lockedAchievements.isEmpty {
                             VStack(alignment: .leading, spacing: 16) {
-                                Text("Locked")
-                                    .font(.system(size: 20, weight: .bold))
-                                    .foregroundColor(.white.opacity(0.6))
+                                AppSectionTitle(title: "Locked", accent: AppTheme.purple)
                                 
                                 ForEach(lockedAchievements) { achievement in
                                     AchievementCard(achievement: achievement, isUnlocked: false)
@@ -106,12 +94,25 @@ struct AchievementCard: View {
         HStack(spacing: 16) {
             ZStack {
                 Circle()
-                    .fill(isUnlocked ? Color(hex: "24CFA4").opacity(0.2) : Color.white.opacity(0.05))
+                    .fill(
+                        RadialGradient(
+                            colors: [
+                                (isUnlocked ? AppTheme.teal : AppTheme.purple).opacity(0.22),
+                                Color.white.opacity(0.04)
+                            ],
+                            center: .center,
+                            startRadius: 8,
+                            endRadius: 32
+                        )
+                    )
                     .frame(width: 60, height: 60)
+                    .overlay(
+                        Circle().stroke((isUnlocked ? AppTheme.teal : AppTheme.purple).opacity(0.35), lineWidth: 1)
+                    )
                 
                 Image(systemName: achievement.icon)
                     .font(.system(size: 28))
-                    .foregroundColor(isUnlocked ? Color(hex: "24CFA4") : .white.opacity(0.3))
+                    .foregroundColor(isUnlocked ? AppTheme.teal : .white.opacity(0.3))
             }
             
             VStack(alignment: .leading, spacing: 4) {
@@ -142,14 +143,7 @@ struct AchievementCard: View {
             }
         }
         .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(isUnlocked ? Color(hex: "24CFA4").opacity(0.1) : Color.white.opacity(0.05))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(isUnlocked ? Color(hex: "24CFA4").opacity(0.3) : Color.clear, lineWidth: 1)
-                )
-        )
+        .glassCard(accent: isUnlocked ? AppTheme.teal : AppTheme.purple, cornerRadius: 14)
     }
     
     private func getRequirementText() -> String {

@@ -25,8 +25,7 @@ struct AddStrikeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -87,10 +86,7 @@ struct AddStrikeView: View {
                             }
                         }
                         .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white.opacity(0.05))
-                        )
+                        .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                         
                         // Peak Force Input
                         VStack(alignment: .leading, spacing: 12) {
@@ -122,10 +118,7 @@ struct AddStrikeView: View {
                             }
                         }
                         .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white.opacity(0.05))
-                        )
+                        .glassCard(accent: AppTheme.purple, cornerRadius: 14)
                         
                         // Time to Peak Input
                         VStack(alignment: .leading, spacing: 12) {
@@ -157,10 +150,7 @@ struct AddStrikeView: View {
                             }
                         }
                         .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white.opacity(0.05))
-                        )
+                        .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                         
                         // Stability Input
                         VStack(alignment: .leading, spacing: 12) {
@@ -192,21 +182,10 @@ struct AddStrikeView: View {
                             }
                         }
                         .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white.opacity(0.05))
-                        )
+                        .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                         
-                        // Save Button
-                        Button(action: saveStrike) {
-                            Text("Add Strike")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(Color(hex: "8B309C"))
-                                .cornerRadius(12)
-                        }
+                        Button("Add Strike", action: saveStrike)
+                            .buttonStyle(PrimaryGradientButtonStyle(accent: AppTheme.purple))
                         .padding(.top, 8)
                         .padding(.bottom, 40)
                     }

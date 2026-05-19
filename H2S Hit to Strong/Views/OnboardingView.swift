@@ -34,11 +34,10 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            Color(hex: "0E0D12")
-                .ignoresSafeArea()
+            AppBackgroundView()
             
             if hasCompletedOnboarding {
-                TrainingDashboardView()
+                HomeView()
                     .preferredColorScheme(.dark)
             } else {
                 VStack(spacing: 0) {
@@ -75,13 +74,9 @@ struct OnboardingView: View {
                             }
                         }) {
                             Text(currentPage < pages.count - 1 ? "Next" : "Get Started")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(Color(hex: "24CFA4"))
-                                .cornerRadius(12)
                         }
+                        .buttonStyle(PrimaryGradientButtonStyle())
                         .padding(.horizontal, 40)
                         .padding(.bottom, 40)
                     }
@@ -108,8 +103,16 @@ struct OnboardingPageView: View {
             // Icon
             ZStack {
                 Circle()
-                    .fill(page.color.opacity(0.2))
+                    .fill(
+                        RadialGradient(
+                            colors: [page.color.opacity(0.25), page.color.opacity(0.05)],
+                            center: .center,
+                            startRadius: 20,
+                            endRadius: 100
+                        )
+                    )
                     .frame(width: 200, height: 200)
+                    .overlay(Circle().stroke(page.color.opacity(0.35), lineWidth: 1))
                 
                 Image(systemName: page.icon)
                     .font(.system(size: 80))

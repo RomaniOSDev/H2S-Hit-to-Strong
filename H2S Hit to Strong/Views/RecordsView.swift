@@ -15,8 +15,7 @@ struct RecordsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -30,9 +29,7 @@ struct RecordsView: View {
                         
                         // Personal Records
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Personal Records")
-                                .font(.system(size: 20, weight: .bold))
-                                .foregroundColor(.white)
+                            AppSectionTitle(title: "Personal Records", accent: AppTheme.purple)
                             
                             VStack(spacing: 12) {
                                 RecordCard(
@@ -68,9 +65,7 @@ struct RecordsView: View {
                         
                         // Statistics
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Statistics")
-                                .font(.system(size: 20, weight: .bold))
-                                .foregroundColor(.white)
+                            AppSectionTitle(title: "Statistics", accent: AppTheme.teal)
                             
                             HStack(spacing: 12) {
                                 RecordsStatCard(
@@ -104,9 +99,7 @@ struct RecordsView: View {
                         
                         // Calibration
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Calibration")
-                                .font(.system(size: 20, weight: .bold))
-                                .foregroundColor(.white)
+                            AppSectionTitle(title: "Calibration", accent: AppTheme.teal)
                             
                             VStack(spacing: 12) {
                                 HStack {
@@ -127,20 +120,10 @@ struct RecordsView: View {
                                         .foregroundColor(Color(hex: "24CFA4"))
                                 }
                                 .padding(16)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white.opacity(0.05))
-                                )
+                                .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                                 
-                                Button(action: { showCalibration = true }) {
-                                    Text("Calibrate")
-                                        .font(.system(size: 16, weight: .semibold))
-                                        .foregroundColor(.white)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.vertical, 14)
-                                        .background(Color(hex: "24CFA4"))
-                                        .cornerRadius(12)
-                                }
+                                Button("Calibrate") { showCalibration = true }
+                                    .buttonStyle(PrimaryGradientButtonStyle())
                             }
                         }
                         .padding(.horizontal, 20)
@@ -191,10 +174,7 @@ struct RecordCard: View {
             Spacer()
         }
         .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 
@@ -214,10 +194,7 @@ struct RecordsStatCard: View {
         }
         .frame(maxWidth: .infinity)
         .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 
@@ -229,8 +206,7 @@ struct CalibrationView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 VStack(spacing: 30) {
                     Text("Set Calibration Max")
@@ -268,18 +244,11 @@ struct CalibrationView: View {
                         .padding(.horizontal, 40)
                     }
                     
-                    Button(action: {
+                    Button("Save Calibration") {
                         recordsManager.setCalibration(max: calibrationValue)
                         dismiss()
-                    }) {
-                        Text("Save Calibration")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(Color(hex: "24CFA4"))
-                            .cornerRadius(12)
                     }
+                    .buttonStyle(PrimaryGradientButtonStyle())
                     .padding(.horizontal, 40)
                     
                     Spacer()

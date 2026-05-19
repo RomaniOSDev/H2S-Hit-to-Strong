@@ -15,8 +15,7 @@ struct StrikeAnalysisView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: "0E0D12")
-                    .ignoresSafeArea()
+                AppBackgroundView(style: .sheet)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -81,10 +80,7 @@ struct StrikeAnalysisView: View {
                                 }
                             }
                             .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.white.opacity(0.05))
-                            )
+                            .glassCard(accent: AppTheme.teal, cornerRadius: 14)
                         }
                         .padding(.horizontal, 20)
                         
@@ -134,14 +130,7 @@ struct StrikeAnalysisView: View {
                                 .lineSpacing(4)
                         }
                         .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color(hex: "24CFA4").opacity(0.1))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(Color(hex: "24CFA4").opacity(0.3), lineWidth: 1)
-                                )
-                        )
+                        .elevatedCard(accent: AppTheme.teal, cornerRadius: 14)
                         .padding(.horizontal, 20)
                         .padding(.bottom, 40)
                     }
@@ -211,10 +200,7 @@ struct MetricCard: View {
                 .foregroundColor(color)
         }
         .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white.opacity(0.05))
-        )
+        .glassCard(accent: color, cornerRadius: 14)
     }
 }
 

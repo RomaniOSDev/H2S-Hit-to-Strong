@@ -10,6 +10,7 @@ import Charts
 
 struct LiveSessionView: View {
     let mode: TrainingMode
+    var goals: WorkoutGoals? = nil
     @Environment(\.dismiss) var dismiss
     
     @State private var sessionStartTime = Date()
@@ -23,8 +24,7 @@ struct LiveSessionView: View {
     
     var body: some View {
         ZStack {
-            Color(hex: "0E0D12")
-                .ignoresSafeArea()
+            AppBackgroundView(style: .session)
             
             VStack(spacing: 0) {
                 // Header
@@ -33,16 +33,22 @@ struct LiveSessionView: View {
                         Image(systemName: "xmark")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.white)
-                            .padding(12)
-                            .background(Color.white.opacity(0.1))
-                            .clipShape(Circle())
+                            .frame(width: 44, height: 44)
+                            .glassCard(accent: AppTheme.teal, cornerRadius: 22)
                     }
                     
                     Spacer()
                     
-                    Text(mode.rawValue)
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white.opacity(0.7))
+                    VStack(spacing: 2) {
+                        if let goals {
+                            Text(goals.workoutName)
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(Color(hex: "24CFA4"))
+                        }
+                        Text(mode.rawValue)
+                            .font(.system(size: goals != nil ? 12 : 16, weight: .medium))
+                            .foregroundColor(.white.opacity(0.7))
+                    }
                     
                     Spacer()
                     
@@ -74,6 +80,12 @@ struct LiveSessionView: View {
                     )
                 }
                 .padding(.top, 40)
+                
+                if let goals {
+                    workoutGoalsProgress(goals)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 20)
+                }
                 
                 // H2S Index
                 VStack(spacing: 12) {
@@ -116,20 +128,13 @@ struct LiveSessionView: View {
                 
                 // Bottom Panel
                 VStack(spacing: 16) {
-                    Button(action: {
+                    Button("Analyze Last Strike") {
                         if let strike = latestStrike {
                             selectedStrike = strike
                             showAnalysis = true
                         }
-                    }) {
-                        Text("Analyze Last Strike")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(Color(hex: "8B309C"))
-                            .cornerRadius(12)
                     }
+                    .buttonStyle(PrimaryGradientButtonStyle(accent: AppTheme.purple))
                     .disabled(latestStrike == nil)
                     .opacity(latestStrike == nil ? 0.5 : 1.0)
                     
@@ -177,6 +182,54 @@ struct LiveSessionView: View {
                 StrikeAnalysisView(strike: strike)
             }
         }
+    }
+    
+    @ViewBuilder
+    private func workoutGoalsProgress(_ goals: WorkoutGoals) -> some View {
+        VStack(spacing: 10) {
+            HStack {
+                goalProgressItem(
+                    title: "Strikes",
+                    current: strikes.count,
+                    target: goals.targetStrikes,
+                    color: Color(hex: "24CFA4")
+                )
+                goalProgressItem(
+                    title: "H2S",
+                    current: Int(averageH2S),
+                    target: Int(goals.targetH2SIndex),
+                    color: Color(hex: "8B309C")
+                )
+            }
+        }
+        .padding(14)
+        .glassCard(accent: AppTheme.teal, cornerRadius: 14)
+    }
+    
+    private func goalProgressItem(title: String, current: Int, target: Int, color: Color) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Text(title)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.white.opacity(0.6))
+                Spacer()
+                Text("\(current)/\(target)")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundColor(current >= target ? color : .white)
+            }
+            GradientProgressBar(
+                progress: Double(current) / Double(max(target, 1)),
+                accent: color,
+                height: 6
+            )
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 4)
+    }
+    
+    private var averageH2S: Double {
+        guard !strikes.isEmpty else { return 0 }
+        return strikes.map(\.h2sIndex).reduce(0, +) / Double(strikes.count)
     }
     
     private var latestStrike: Strike? {
